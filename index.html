@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunting</title>
+    <!-- Daisy Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Work Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- tailwind custom class -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                }
+            }
+        }
+    }
+</script>
+
+<!-- css class -->
+<style>
+    .font-work-sans {
+        font-family: 'Work Sans', sans-serif;
+    }
+</style>
+
+
+<body class="font-work-sans">
+    <header>
+
+        <!-- Navbar -->
+        <div class=" container mx-auto px-5">
+            <div class="navbar bg-base-100 my-5">
+                <div class="navbar-start">
+                    <a class="text-3xl font-bold">Hot Gadgets</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn btn-primary text-white font-bold">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner section -->
+        <div class="hero bg-base-200">
+            <div class="container mx-auto px-5">
+                <div class="text-center">
+                    <div class="py-24">
+                        <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+                        <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority
+                            <br>
+                            have suffered alteration in some form,
+                            by injected humou.
+                        </p>
+                        <button class="btn btn-primary text-white font-bold">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto mt-20 px-5">
+        <!-- search section -->
+        <h2 class="text-4xl font-bold m-10 text-center">Search your phone</h2>
+
+        <section class="my-10 flex justify-center">
+
+            <div class="form-control">
+                <label class="input-group">
+                    <input id="search-field" type="text" placeholder="Type here" class="input input-bordered w-full" />
+                    <button onclick="handleSearch()" class="btn btn-info text-white">Search</button>
+                </label>
+            </div>
+        </section>
+
+
+
+        <!-- search result -->
+        <section>
+
+            <!-- Spinner -->
+            <div id="loading-spinner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+
+
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            </div>
+
+            <!-- show all button -->
+            <div id="show-all-container" class="hidden text-center">
+                <button onclick="handleShowAll()" class="btn btn-info my-5 text-white">Show All</button>
+            </div>
+        </section>
+
+
+        <!-- Show details modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn hidden" onclick="show_details_modal.showModal()">open modal</button>
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <h3 id="phone-name" class="font-bold text-2xl text-center"></h3>
+                <div id="show-detail-container">
+
+                </div>
+                <div class="modal-action justify-center">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary">Close</button>
+                </div>
+            </form>
+        </dialog>
+
+    </main>
+
+    <!-- footer section -->
+    <footer class=" bg-base-200">
+        <div class=" container mx-auto px-5">
+            <div class="navbar mt-10 pt-10 my-5">
+                <div class="navbar-start">
+                    <a class="text-3xl font-bold">Hot Gadgets</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn btn-primary text-white font-bold">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <hr class="w-full">
+        </div>
+
+        <div class=" p-10 container mx-auto">
+            <div class="footer text-base-content">
+                <div>
+                    <a class="link link-hover">Product</a>
+                    <a class="link link-hover">Browse jobs</a>
+                    <a class="link link-hover">Remote jobs</a>
+                    <a class="link link-hover">Startup jobs</a>
+                    <a class="link link-hover">Company jobs</a>
+                </div>
+                <div>
+                    <a class="link link-hover">Popular</a>
+                    <a class="link link-hover">UIUX Design</a>
+                    <a class="link link-hover">Product Design</a>
+                    <a class="link link-hover">Back-End Developer</a>
+                    <a class="link link-hover">Front-End Developer</a>
+                </div>
+                <div>
+                    <a class="link link-hover">Resource</a>
+                    <a class="link link-hover">Faq</a>
+                    <a class="link link-hover">Support</a>
+                    <a class="link link-hover">Privacy Policy</a>
+                    <a class="link link-hover">Terms of Service</a>
+                </div>
+                <div>
+                    <a class="link link-hover">Company</a>
+                    <a class="link link-hover">About Us</a>
+                    <a class="link link-hover">Contact Us</a>
+                    <a class="link link-hover">Career Tips</a>
+                    <a class="link link-hover">Careers</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

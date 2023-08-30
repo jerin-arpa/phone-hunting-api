@@ -128,5 +128,3 @@ const handleShowAll = () => {
     handleSearch(true);
 }
 
-
-loadPhone();
